@@ -1,3 +1,9 @@
 [user]
 	email = danieldragonhatcher@gmail.com
 	name = Dragon-Hatcher
+[credential]
+	helper = 
+	helper = /usr/local/bin/git-credential-manager
+	credentialStore = cache
+[credential "https://dev.azure.com"]
+	useHttpPath = true
