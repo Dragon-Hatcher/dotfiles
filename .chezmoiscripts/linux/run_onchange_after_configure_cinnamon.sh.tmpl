@@ -1,6 +1,18 @@
 {{ if (eq .chezmoi.os "linux") -}}
 #!/bin/bash
 
+# Install icon theme
+sudo add-apt-repository -y ppa:papirus/papirus
+sudo apt-get update -y
+sudo apt-get install -y papirus-icon-theme
+
+# Theming
+dconf write /org/gnome/desktop/interface/cursor-theme "'DMZ-White'"
+dconf write /org/gnome/desktop/interface/gtk-theme "'Mint-L-Dark'"
+dconf write /org/cinnamon/theme/name "'Mint-L-Dark'"
+dconf write /org/cinnamon/desktop/interface/icon-theme "'ePapirus-Dark'"
+
+# Preffered apps
 {{ if lookPath "google-chrome" }}
     xdg-settings set default-web-browser google-chrome.desktop
 {{ end -}}
