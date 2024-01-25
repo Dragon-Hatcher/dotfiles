@@ -12,7 +12,7 @@ dconf write /org/gnome/desktop/interface/gtk-theme "'Mint-L-Dark'"
 dconf write /org/cinnamon/theme/name "'Mint-L-Dark'"
 dconf write /org/cinnamon/desktop/interface/icon-theme "'ePapirus-Dark'"
 
-# Preffered apps
+# Preferred apps
 {{ if lookPath "google-chrome" }}
     xdg-settings set default-web-browser google-chrome.desktop
 {{ end -}}
